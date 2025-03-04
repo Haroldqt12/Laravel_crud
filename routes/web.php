@@ -15,8 +15,8 @@ use App\Http\Controllers\TaskController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('tasks.index'); // Redirect home to tasks list
 });
 
-
+// Correct resource route
 Route::resource('tasks', TaskController::class);
